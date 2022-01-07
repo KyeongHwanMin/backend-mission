@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Manager
 
 
 class Product(models.Model):
@@ -11,3 +12,4 @@ class Product(models.Model):
 
     seller = models.CharField(max_length=200, null=True, verbose_name='입점사')
 
+    objects = Manager()

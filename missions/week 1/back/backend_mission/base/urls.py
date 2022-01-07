@@ -5,13 +5,12 @@ from django.urls import include, path
 from django.views.generic import TemplateView
 from django.contrib.auth import views as auth_views
 
-from product.views import ProductListview
+# from product.views import ProductListview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', ProductListview.as_view(), name='home'),
-    # path('', TemplateView.as_view(template_name='base.html'), name='base'),
-
+    # path('', ProductListview.as_view(), name='home'),
+    #path('', TemplateView.as_view(template_name='base.html'), name='base'),
     path('accounts/', include('accounts.urls')),
     path('product/', include('product.urls')),
     path('comment/', include('comment.urls')),
