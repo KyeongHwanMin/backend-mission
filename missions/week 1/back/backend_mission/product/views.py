@@ -35,4 +35,4 @@ class ProductListview(ListView):
     model = Product
     context_object_name = 'product_list'
     template_name = 'product/list.html'
-    paginate_by = 2
+    paginate_by = 5
